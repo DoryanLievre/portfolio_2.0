@@ -53,7 +53,7 @@ export default function Header() {
                     bgColor="transparent"
                 />
                 <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-                    Prendre Contact
+                    Contactez-moi
                 </p>
             </motion.div>
         </header>
