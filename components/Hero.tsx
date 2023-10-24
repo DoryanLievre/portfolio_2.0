@@ -28,7 +28,7 @@ export default function Hero() {
                     </h1>
                     <div className="pt-5">
                         <Link href="#about">
-                            <button className="heroButton">A Propos</button>
+                            <button className="heroButton">À Propos</button>
                         </Link>
                         <Link href="#experience">
                             <button className="heroButton">Mon Expérience</button>
