@@ -16,7 +16,7 @@ export default function Hero() {
         delaySpeed: 2000,
         });
     return (
-        <div className="h-screen flex flex-column space-y-8 items-center justify-center text-center overflow-hidden relative">
+        <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative">
             <div className="relative">
                 <BackgroundCircles/>
                 <Image className="relative rounded-full h-32 w-32 object-cover mx-auto" src="/images/profil-picture.png" height={300} width={300} alt="Image de profil de l'auteur" />
