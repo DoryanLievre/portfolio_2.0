@@ -9,7 +9,7 @@ export default function about() {
             transition={{duration: 1.5}}
             className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-                about
+                À Propos
             </h3>
             <motion.img
                 initial={{x: -200, opacity: 0}}
@@ -22,8 +22,8 @@ export default function about() {
             />
 
             <div className="space-y-8 md:px-10">
-                <h4 className="text-4xl font-semibold ">Qui suis-je ?</h4>
-                <p className="text-base">
+                <h4 className="text-2xl md:text-4xl font-semibold ">Qui suis-je ?</h4>
+                <p className="text-sm md:text-base">
                     Je m'appelle  Doryan Lièvre j'ai 25 ans et je suis développeur web.
                     💻 Passionné par l'informatique et les nouvelles technologies depuis mon plus jeune âge, mes premiers Lego étaient d'anciens ordinateurs. Enfant, j'ai toujours voulu comprendre comment les choses fonctionnaient, que ce soit un ordinateur, une télévision, ou pourquoi l'écran s'allumait. Pour trouver les réponses à ces questions, j'ai naturellement orienté mes études vers le développement informatique.
                     🗓️ Aujourd'hui, je suis à la recherche d'une opportunité en alternance ou en CDI.
