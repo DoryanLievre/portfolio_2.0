@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WorkExperience from "@/components/WorkExperience";
+import StudyExperience from "@/components/StudyExperience";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       </section>
       <section id="experience" className="snap-center">
         <WorkExperience />
+      </section>
+      <section id="study" className="snap-center">
+        < StudyExperience/>
       </section>
     </main>
   );
