@@ -7,7 +7,7 @@ export default function about() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center pt-[100px]"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl md:ml-40">
         À Propos
@@ -19,7 +19,7 @@ export default function about() {
         viewport={{ once: true }}
         src="./images/profil-about.png"
         alt="Image de profil de l'auteur"
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover object-top md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 md:mb-0 flex-shrink-0 w-32 h-32 rounded-full object-cover object-top md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
       />
 
       <div className="space-y-8 md:px-10">

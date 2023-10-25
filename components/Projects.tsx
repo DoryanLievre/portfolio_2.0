@@ -6,7 +6,7 @@ export default function Projects(){
     const projects = [1,2,3,4,5];
     return (
         <div
-            className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
+            className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 pt-[50px]">
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Projets
             </h3>
@@ -20,7 +20,7 @@ export default function Projects(){
                             whileInView={{y: 0,opacity: 1}}
                             viewport={{once: true}} src="/images/yes_we_dev_logo.png" alt=""/>
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                            <h4 className="text-center"><span className="border border-[#22d3ee]/50 border-2 font-semibold px-2 rounded-2xl text-[#22d3ee]/80 mr-3 "><span className="text-white">{index + 1}</span> - {projects.length}</span>Project Name</h4>
+                            <h4 className="text-center md:text-2xl"><span className="border border-[#22d3ee]/50 border-2 font-semibold px-2 rounded-2xl text-[#22d3ee]/80 mr-3 "><span className="text-white">{index + 1}</span> - {projects.length}</span>Project Name</h4>
                             <p className="text-lg text-center">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque consectetur, debitis deleniti eum expedita facere fuga harum iusto neque nihil perferendis quibusdam reiciendis reprehenderit suscipit. Atque earum impedit iusto!
                             </p>

@@ -5,7 +5,7 @@ import * as React from 'react';
 // TODO: ajouter les props pour personnaliser les cartes
 export default function ExperienceCard(){
     return (
-        <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 cursor-pointer transition-opacity duration-200 hover:opacity-100">
+        <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px] md:w-[600px] xl:w-[800px] snap-center bg-[#292929] p-10 opacity-40 cursor-pointer transition-opacity duration-200 hover:opacity-100">
             <motion.img
                 initial={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1.2 }}

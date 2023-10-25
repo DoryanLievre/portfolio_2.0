@@ -28,14 +28,14 @@ export default function Hero() {
           alt="Image de profil de l'auteur"
         />
         <div className=" relative z-20">
-          <h2 className="text-sm uppercase text-gray-400 pb-2 pt-8 tracking-[10px]">
+          <h2 className="text-sm md:text-lg uppercase text-gray-400 pb-2 pt-8 tracking-[5px] md:tracking-[10px]">
             Développeur Fullstack JS
           </h2>
-          <h1 className="relative text-4xl lg:text-6xl font-semibold px-10">
+          <h1 className="relative text-2xl md:text-4xl font-semibold px-10">
             <span className="mr-3">{text}</span>
             <Cursor cursorColor="#22d3ee" />
           </h1>
-          <div className="pt-5">
+          <div className=" md:pt-5 flex flex-col md:flex-row pt-10">
             <Link href="#about">
               <button className="heroButton">À Propos</button>
             </Link>
@@ -52,6 +52,9 @@ export default function Hero() {
               <button className="heroButton">Mes Projets</button>
             </Link>
           </div>
+          <h4 className="relative text-gray-500 text-sm md:text-lg text-center top-[75px] hidden md:block">
+            Pour <span className="text-[#22d3ee]/50">scroller</span> horizontalement, utilisez <span className="text-[#22d3ee]/50">shift</span> + la <span className="text-[#22d3ee]/50">molette </span>de votre souris
+          </h4>
         </div>
       </div>
     </div>
