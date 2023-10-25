@@ -2,6 +2,7 @@
 'use cient';
 import { motion } from 'framer-motion';
 import * as React from 'react';
+// TODO: ajouter les props pour personnaliser les cartes
 export default function ExperienceCard(){
     return (
         <article className="mr-[20px] mt-40 h-[65%] flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[650px] snap-center bg-[#292929] p-10 opacity-40 cursor-pointer transition-opacity duration-200 hover:opacity-100">
