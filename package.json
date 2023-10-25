@@ -11,6 +11,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "framer-motion": "^10.16.4",
     "next": "13.5.6",
     "prettier": "^3.0.3",
