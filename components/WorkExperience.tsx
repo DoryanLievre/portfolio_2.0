@@ -1,7 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
 import ExperienceCard from "@/components/ExperienceCard";
-import ScrollContainer from 'react-scroll-horizontal';
 export default function WorkExperience() {
   return (
       <motion.div
