@@ -53,7 +53,10 @@ export default function Hero() {
             </Link>
           </div>
           <h4 className="relative text-gray-500 text-sm md:text-lg text-center top-[75px] hidden md:block">
-            Pour <span className="text-[#22d3ee]/50">scroller</span> horizontalement, utilisez <span className="text-[#22d3ee]/50">shift</span> + la <span className="text-[#22d3ee]/50">molette </span>de votre souris
+            Pour <span className="text-[#22d3ee]/50">scroller</span>{" "}
+            horizontalement, utilisez{" "}
+            <span className="text-[#22d3ee]/50">shift</span> + la{" "}
+            <span className="text-[#22d3ee]/50">molette </span>de votre souris
           </h4>
         </div>
       </div>
