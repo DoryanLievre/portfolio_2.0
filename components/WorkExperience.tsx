@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import ExperienceCard from "@/components/ExperienceCard";
 import ScrollContainer from 'react-scroll-horizontal';
-export default function workExperience() {
+export default function WorkExperience() {
   return (
       <motion.div
         initial={{ opacity: 0 }}
