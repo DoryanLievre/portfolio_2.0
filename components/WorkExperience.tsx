@@ -12,14 +12,12 @@ export default function WorkExperience() {
           <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
               Expérience
           </h3>
-          <ScrollContainer
-              reverseScroll = { true }
-              className="w-ful flex space-x-5 overflow-scrolling overflow-x-scroll overflow-x-hidden p-10 snap-x snap-mandatory scroll-smooth scrollbar  scrollbar-track-gray-400/20 scrollbar-thumb-[#22d3ee]/80 "
+          <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scroll-smooth scrollbar  scrollbar-track-gray-400/20 scrollbar-thumb-[#22d3ee]/80 scrollbar-thin "
           >
               <ExperienceCard/>
               <ExperienceCard/>
               <ExperienceCard/>
-          </ScrollContainer>
+          </div>
       </motion.div>
       )
 }
