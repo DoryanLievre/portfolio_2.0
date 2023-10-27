@@ -32,7 +32,8 @@
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^6.4.0",
     "sanity": "^3.0.0",
-    "styled-components": "^5.2"
+    "styled-components": "^5.2",
+    "vercel": "^32.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",
