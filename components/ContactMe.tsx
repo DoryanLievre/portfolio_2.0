@@ -16,8 +16,9 @@ export default function ContactMe({pageInfo}: Props) {
   // TODO: ERROR HANDLING AND FORM VALIDATION
   const { register, handleSubmit, watch, formState: { errors } } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = (formData: any) => {
-    window.location.href = `mailto:${pageInfo.email}?subject=${formData.subject}&body= Bonjour, je m'appelle ${formData.name}.${formData.message} (mail du contact: ${formData.email}) `;
+    window.open(`mailto:${pageInfo.email}?subject=${formData.subject}&body= Bonjour, je m'appelle ${formData.name}.${formData.message} (mail du contact: ${formData.email}) `, '_blank');
   };
+
 
 
   return (
