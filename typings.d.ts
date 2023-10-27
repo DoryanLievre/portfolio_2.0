@@ -46,13 +46,14 @@ export interface Skill extends SanityBody {
 
 export interface Project extends SanityBody {
     _type: 'project';
+    title: string;
     image: Image;
     linkToProject: string;
     summary: string;
     technologies: Technology[];
 }
 
-export interface Experience extends SanityDocument {
+export interface Experience extends SanityBody {
     _type: 'experience';
     jobTitle: string;
     companyImage: Image;
@@ -63,7 +64,7 @@ export interface Experience extends SanityDocument {
     technologies: Technology[];
     points: string[];
 }
-export interface Study extends SanityDocument {
+export interface Study extends SanityBody {
     _type: 'study';
     diplomaTitle: string;
     schoolImage: Image;
