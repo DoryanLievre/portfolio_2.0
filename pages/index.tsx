@@ -38,30 +38,30 @@ export default function Home({ pageInfo, experiences, studies, skills, socials, 
                 <Header socials={socials} />
 
                 <section id="hero" className="snap-start">
-                    <Hero />
+                    <Hero pageInfo={pageInfo} />
                 </section>
 
                 <section id="about" className="snap-center">
-                    <About />
+                    <About pageInfo={pageInfo}/>
                 </section>
 
                 <section id="experience" className="snap-center">
-                    <WorkExperience />
+                    <WorkExperience experiences={experiences} />
                 </section>
 
                 <section id="study" className="snap-center">
-                    <StudyExperience />
+                    <StudyExperience studies ={studies}/>
                 </section>
 
                 <section id="skills" className="snap-start">
-                    <Skills />
+                    <Skills skills={skills} />
                 </section>
 
                 <section id="project" className="snap-start">
-                    <Projects />
+                    <Projects projects={projects} />
                 </section>
                 <section id="contact" className="snap-start">
-                    <ContactMe />
+                    <ContactMe pageInfo={pageInfo} />
                 </section>
 
                 <Link href="#hero">
@@ -70,7 +70,7 @@ export default function Home({ pageInfo, experiences, studies, skills, socials, 
                     </div>
                 </Link>
                 <footer className="sticky w-screen flex items-center justify-center bg-gray-500/20 snap-center ">
-                    <p className="text-2xl text-[#22d3ee]/50 font-semibold tracking-[2px]  py-10">Merci d'avoir scroller jusqu'ici !</p>
+                    <p className="text-2xl text-[#22d3ee]/50 font-semibold tracking-[2px]  py-10">Merci d&apos;avoir scroller jusqu&apos;ici !</p>
                 </footer>
             </main>
         </div>
@@ -83,8 +83,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const experiences: Experience[] = await fetchExperiences();
     const pageInfo: PageInfo = await fetchPageInfo();
     const projects: Project[] = await fetchProjects();
-    console.log("Skills:", skills);
-    console.log("Socials:", socials);
 
     return {
         props: {

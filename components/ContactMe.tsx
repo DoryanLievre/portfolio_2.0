@@ -1,11 +1,14 @@
 import * as React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import {PageInfo} from "@/typings";
 
-type Props = {};
-export default function ContactMe(props: Props) {
+type Props = {
+  pageInfo: PageInfo;
+};
+export default function ContactMe({pageInfo}: Props) {
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly items-center mx-auto pt-[100px]">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 md:top-7 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
       <div className="flex flex-col space-y-10">
@@ -17,18 +20,18 @@ export default function ContactMe(props: Props) {
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#22d3ee] h-7 w-7 animate-pulse" />
-            <p className="text-1xl md:text-2xl">(+33) 6 89 66 28 84</p>
+            <p className="text-1xl md:text-2xl">{pageInfo.phoneNumber}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#22d3ee] h-7 w-7 animate-pulse" />
-            <p className="text-1xl md:text-2xl">dlievre.dev@gmail.com</p>
+            <p className="text-1xl md:text-2xl">{pageInfo.email}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#22d3ee] h-7 w-7 animate-pulse" />
             <p className="text-1xl md:text-2xl">
-              4 Avenue du Languedoc, Rennes
+              {pageInfo.address}
             </p>
           </div>
         </div>
