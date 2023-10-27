@@ -2,7 +2,12 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-export default function Header() {
+import {Social} from "@/typings";
+
+type Props = {
+    socials: Social[];
+}
+export default function Header({socials}: Props) {
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl-items-center">
       <motion.div
@@ -21,22 +26,17 @@ export default function Header() {
         }}
         className="flex flex-row items-center"
       >
-        <SocialIcon
-          aria-label="mon compte linkedin"
-          url="https://www.linkedin.com/in/doryan-li%C3%A8vre/"
-          target="_blank"
-          fgColor="gray"
-          bgColor="transparent"
-          className="hover:scale-125 transition-all duration-500 ease-in-out"
-        />
-        <SocialIcon
-          aria-label="mn compte github"
-          url="https://github.com/DoryanLievre"
-          target="_blank"
-          fgColor="gray"
-          bgColor="transparent"
-          className="hover:scale-125 transition-all duration-500 ease-in-out"
-        />
+          {socials.map((social) => (
+              <SocialIcon
+                  key={social._id}
+                  aria-label="mon compte linkedin"
+                  url={social.url}
+                  target="_blank"
+                  fgColor="gray"
+                  bgColor="transparent"
+                  className="hover:scale-125 transition-all duration-500 ease-in-out"
+              />
+          ))}
       </motion.div>
       <motion.div
         initial={{
