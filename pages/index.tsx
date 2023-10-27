@@ -93,6 +93,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
             pageInfo,
             projects
         },
-        revalidate: 10,
     };
 };
