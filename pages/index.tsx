@@ -27,30 +27,6 @@ type Props = {
     socials: Social[];
     projects: Project[];
 };
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-    const skills: Skill[] = await fetchSkills();
-    const socials: Social[] = await fetchSocials();
-    const studies: Study[] = await fetchStudies();
-    const experiences: Experience[] = await fetchExperiences();
-    const pageInfo: PageInfo = await fetchPageInfo();
-    const projects: Project[] = await fetchProjects();
-    console.log("Skills:", skills);
-    console.log("Socials:", socials);
-
-    return {
-        props: {
-            skills,
-            socials,
-            studies,
-            experiences,
-            pageInfo,
-            projects
-        },
-        revalidate: 10,
-    };
-};
-
 export default function Home({ pageInfo, experiences, studies, skills, socials, projects }: Props) {
     return (
         <div>
@@ -100,3 +76,25 @@ export default function Home({ pageInfo, experiences, studies, skills, socials, 
         </div>
     );
 }
+export const getStaticProps: GetStaticProps<Props> = async () => {
+    const skills: Skill[] = await fetchSkills();
+    const socials: Social[] = await fetchSocials();
+    const studies: Study[] = await fetchStudies();
+    const experiences: Experience[] = await fetchExperiences();
+    const pageInfo: PageInfo = await fetchPageInfo();
+    const projects: Project[] = await fetchProjects();
+    console.log("Skills:", skills);
+    console.log("Socials:", socials);
+
+    return {
+        props: {
+            skills,
+            socials,
+            studies,
+            experiences,
+            pageInfo,
+            projects
+        },
+        revalidate: 10,
+    };
+};
