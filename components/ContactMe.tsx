@@ -1,11 +1,25 @@
 import * as React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import {PageInfo} from "@/typings";
+import {useForm, SubmitHandler} from "react-hook-form";
 
+type FormValues = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
 type Props = {
   pageInfo: PageInfo;
 };
 export default function ContactMe({pageInfo}: Props) {
+  // TODO: ERROR HANDLING AND FORM VALIDATION
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<FormValues>();
+  const onSubmit: SubmitHandler<FormValues> = (formData: any) => {
+    window.location.href = `mailto:${pageInfo.email}?subject=${formData.subject}&body= Bonjour, je m'appelle ${formData.name}.${formData.message} (mail du contact: ${formData.email}) `;
+  };
+
+
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly items-center mx-auto pt-[100px]">
       <h3 className="absolute top-24 md:top-7 uppercase tracking-[20px] text-gray-500 text-2xl">
@@ -36,26 +50,31 @@ export default function ContactMe({pageInfo}: Props) {
           </div>
         </div>
 
-        <form className="w-full md:w-fit mx-auto">
+        <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full md:w-fit mx-auto">
           <div className="flex flex-col space-y-2">
             <div className="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
               <input
+                  {...register("name", {required: true})}
                 placeholder="Nom et prénom"
                 className="contactInput w-full md:w-1/2"
                 type="text"
               />
               <input
+                    {...register("email", {required: true})}
                 placeholder="Mail"
                 className="contactInput w-full md:w-1/2"
                 type="text"
               />
             </div>
             <input
+                {...register("subject", {required: true})}
               placeholder="Objet"
               className="contactInput w-full"
               type="text"
             />
-            <textarea placeholder="Message" className="contactInput w-full" />
+            <textarea {...register("message",{required: true})} placeholder="Message" className="contactInput w-full" />
             <button
               type="submit"
               className="bg-[#22d3ee] py-5 px-10 rounded-md text-black font-bold text-lg"
